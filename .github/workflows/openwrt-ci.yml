@@ -137,7 +137,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-serverchan=y
           CONFIG_PACKAGE_luci-app-adguardhome=y
           CONFIG_PACKAGE_luci-app-jd-dailybonus=y
-          CONFIG_PACKAGE_luci-app-vssr=y
+          # CONFIG_PACKAGE_luci-app-vssr=y
           CONFIG_PACKAGE_luci-app-dnsfilter=y
           CONFIG_PACKAGE_luci-app-advancedsetting=y
           # CONFIG_PACKAGE_luci-app-aliddns=y
