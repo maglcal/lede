@@ -105,7 +105,7 @@ jobs:
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_Generic=y
           CONFIG_TARGET_KERNEL_PARTSIZE=256
-          CONFIG_TARGET_ROOTFS_PARTSIZE=1024
+          CONFIG_TARGET_ROOTFS_PARTSIZE=500
           
           # 固件压缩:
           CONFIG_TARGET_IMAGES_GZIP=y
