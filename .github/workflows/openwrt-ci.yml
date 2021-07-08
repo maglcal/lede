@@ -80,12 +80,7 @@ jobs:
 
       - name: Update feeds
         run: |
-          sed -i "/uci commit fstab/a\uci commit network" $ZZZ
-          sed -i "/uci commit network/i\uci set network.lan.ipaddr='10.6.8.2'" $ZZZ              # IPv4 地址(openwrt后台地址)
-          sed -i "/uci commit network/i\uci set network.lan.netmask='255.255.254.0'" $ZZZ           # IPv4 子网掩码
-          sed -i "/uci commit network/i\uci set network.lan.gateway='10.6.9.1'" $ZZZ             # IPv4 网关
-          sed -i "/uci commit network/i\uci set network.lan.dns='61.239.2.69 218.6.200.139'" $ZZZ   # DNS(多个DNS要用空格分开)
-          sed -i "/uci commit network/i\uci set network.lan.delegate='0'" $ZZZ                      # 去掉LAN口使用内置的 IPv6 管理
+          sed -i 's/192.168.1.1/10.6.8.2/g' package/base-files/files/bin/config_generate
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
